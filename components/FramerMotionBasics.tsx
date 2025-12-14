@@ -1,7 +1,7 @@
 "use client";
 
 import { easeOut, motion, AnimatePresence } from "motion/react";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { GoHomeFill } from "react-icons/go";
 import { IoMdSettings } from "react-icons/io";
 import { IoNotifications } from "react-icons/io5";
@@ -38,14 +38,31 @@ const navItems = [
 
 const FramerMotionBasics = () => {
   const [open, setOpen] = useState(true);
-  const [active, setActive] = useState("home");
+  const [active, setActive] = useState(null);
+  const navRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: any) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setActive(null);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <motion.div
+      ref={navRef}
       className="w-auto p-2 border rounded-xl flex justify-between gap-2"
       layout
       transition={{ layout: { duration: 0.25, ease: "easeOut" } }}
     >
-      {navItems.map((item) => {
+      {navItems.map((item: any) => {
         const isActive = active === item.id;
 
         return (
