@@ -58,7 +58,7 @@ const FramerMotionBasics = () => {
   return (
     <motion.div
       ref={navRef}
-      className="w-auto p-2 border rounded-xl flex justify-between gap-2"
+      className="w-auto p-2 bg-neutral-100 rounded-xl flex justify-between gap-2"
       layout
       transition={{ layout: { duration: 0.25, ease: "easeOut" } }}
     >
