@@ -1,0 +1,38 @@
+.highlight-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: rgb(212 212 212);
+    /* neutral-300 */
+
+    /* highlight layer */
+    background-image: linear-gradient(90deg,
+            rgb(212 212 212) 0%,
+            rgb(212 212 212) 35%,
+            rgb(120 120 120) 48%,
+            /* soft start */
+            rgb(82 82 82) 50%,
+            /* subtle peak */
+            rgb(120 120 120) 52%,
+            /* soft end */
+            rgb(212 212 212) 65%,
+            rgb(212 212 212) 100%);
+
+    background-size: 200% 100%;
+    background-position: 0% 0%;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: sweep 4s linear infinite;
+}
+
+@keyframes sweep {
+    from {
+        background-position: 200% 0%;
+    }
+
+    to {
+        background-position: -200% 0%;
+    }
+}
