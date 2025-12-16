@@ -18,7 +18,7 @@ const navItems = [
   },
   {
     id: "IoNotifications",
-    label: "notification",
+    label: "Notification",
     icon: (
       <IoNotifications className="relative z-10 w-5 h-5 rounded cursor-pointer" />
     ),
@@ -44,7 +44,7 @@ const navItems = [
   },
 ];
 
-const FramerMotionBasics = () => {
+const NavBarAnimation = () => {
   const [open, setOpen] = useState(true);
   const [active, setActive] = useState(null);
   const navRef = useRef(null);
@@ -112,4 +112,4 @@ const FramerMotionBasics = () => {
   );
 };
 
-export default FramerMotionBasics;
+export default NavBarAnimation;
