@@ -1,4 +1,5 @@
 import AnimatedDrawer from "@/components/AnimatedDrawer";
+import CardTiltAnimation from "@/components/CardTiltAnimation";
 import CardWidthAnimation from "@/components/CardWidthAnimation";
 import FramerMotionBasics from "@/components/FramerMotionBasics";
 import NavBarAnimation from "@/components/NavBarAnimation";
@@ -10,7 +11,8 @@ export default function Home() {
     <div className="flex flex-col min-h-screen items-center justify-center">
       {/* <FramerMotionBasics /> */}
       {/* <NavBarAnimation /> */}
-      <TextGlitterAnimation />
+      {/* <TextGlitterAnimation /> */}
+      <CardTiltAnimation />
     </div>
   );
 }
