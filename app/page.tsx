@@ -1,6 +1,7 @@
 import AnimatedDrawer from "@/components/AnimatedDrawer";
 import CardTiltAnimation from "@/components/CardTiltAnimation";
 import CardWidthAnimation from "@/components/CardWidthAnimation";
+import FloatingHoverCard from "@/components/FloatingHoverCard";
 import FramerMotionBasics from "@/components/FramerMotionBasics";
 import IconChainAnimation from "@/components/IconChainAnimation";
 import NavBarAnimation from "@/components/NavBarAnimation";
@@ -14,7 +15,8 @@ export default function Home() {
       {/* <NavBarAnimation /> */}
       {/* <TextGlitterAnimation /> */}
       {/* <CardTiltAnimation /> */}
-      <IconChainAnimation />
+      {/* <IconChainAnimation /> */}
+      <FloatingHoverCard />
     </div>
   );
 }

@@ -110,10 +110,10 @@ export default function IconChainAnimation() {
             <span className="text-[#fdca18]">beauty</span> in truth
           </p>
           <div className="flex gap-2 mt-6 w-3/5">
-            <button className="shadow bg-black w-30 h-10 text-white rounded-lg px-2 py-1 min-w-24 cursor-pointer transition-transform duration-150 ease-out active:scale-[0.97]">
+            <button className="shadow bg-black w-30 h-8 text-white rounded-lg px-2 py-1 min-w-24 cursor-pointer transition-transform duration-150 ease-out active:scale-[0.97]">
               Login
             </button>
-            <button className="shadow w-30 h-10 rounded-lg px-2 py-1 min-w-24 cursor-pointer transition-transform duration-150 ease-out active:scale-[0.97]">
+            <button className="shadow-sm w-30 h-8 border border-neutral-300 rounded-lg px-2 py-1 min-w-24 cursor-pointer transition-transform duration-150 ease-out active:scale-[0.97]">
               Start
             </button>
           </div>
