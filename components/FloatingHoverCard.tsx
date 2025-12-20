@@ -12,7 +12,7 @@ const FloatingHoverCard = () => {
 
         <div className="flex text-sm items-center">
           <GoPaperclip className="cursor-pointer mr-4" size={18} />
-          <div className="flex bg-neutral-100 rounded-sm px-2 py-1 cursor-pointer items-center mr-2">
+          <div className="flex bg-neutral-100 rounded-sm px-2 py-1 cursor-pointer items-center mr-2 transition-all duration-200  hover:ring-2 hover:ring-blue-600 hover:ring-offset-1 hover:ring-offset-white">
             <BsFolder2
               className="cursor-pointer mr-2 text-neutral-800"
               size={18}
@@ -24,7 +24,7 @@ const FloatingHoverCard = () => {
             />
           </div>
 
-          <div className="flex bg-neutral-100 rounded-sm px-2 py-1 cursor-pointer items-center mr-2">
+          <div className="flex bg-neutral-100 rounded-sm px-2 py-1 cursor-pointer items-center mr-2 transition-all duration-200  hover:ring-2 hover:ring-blue-600 hover:ring-offset-1 hover:ring-offset-white">
             <IoSettingsOutline
               className="cursor-pointer mr-2 text-neutral-800"
               size={18}
@@ -36,10 +36,10 @@ const FloatingHoverCard = () => {
             />
           </div>
 
-          <div className="flex bg-neutral-100 rounded-sm px-2 py-1 cursor-pointer items-center">
+          <div className="flex bg-neutral-100 rounded-sm px-2.5 py-1 cursor-pointer items-center transition-all duration-200  hover:ring-2 hover:ring-blue-600 hover:ring-offset-1 hover:ring-offset-white">
             <LuUserRoundSearch
               className="cursor-pointer mr-2 text-neutral-800"
-              size={18}
+              size={17}
             />
             <p className="text-neutral-800">account</p>
           </div>
