@@ -39,15 +39,13 @@ const FloatingHoverCard = () => {
             {/* Hover Card */}
             <div
               className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-64
-                         rounded-xl bg-white shadow-xl border border-neutral-200
+                         rounded-xl bg-white shadow border border-neutral-200
                          opacity-0 translate-y-2 pointer-events-none
                          transition-all duration-200 ease-out
                          group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto"
             >
               <div className="p-4">
-                <p className="text-sm font-medium text-neutral-900">
-                  Integrations
-                </p>
+                <p className="text-sm font-medium text-neutral-900">settings</p>
                 <p className="text-xs text-neutral-500 mt-1">
                   Manage all your tasks seamlessly in one centralized location
                 </p>

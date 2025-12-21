@@ -1,6 +1,7 @@
 import AnimatedDrawer from "@/components/AnimatedDrawer";
 import CardTiltAnimation from "@/components/CardTiltAnimation";
 import CardWidthAnimation from "@/components/CardWidthAnimation";
+import DragAndDropCards from "@/components/DragAndDropCards";
 import FloatingHoverCard from "@/components/FloatingHoverCard";
 import FramerMotionBasics from "@/components/FramerMotionBasics";
 import IconChainAnimation from "@/components/IconChainAnimation";
@@ -10,13 +11,14 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen items-center">
+    <div className="flex flex-col min-h-screen items-center justify-center">
       {/* <FramerMotionBasics /> */}
       {/* <NavBarAnimation /> */}
       {/* <TextGlitterAnimation /> */}
       {/* <CardTiltAnimation /> */}
       {/* <IconChainAnimation /> */}
-      <FloatingHoverCard />
+      {/* <FloatingHoverCard /> */}
+      <DragAndDropCards />
     </div>
   );
 }
