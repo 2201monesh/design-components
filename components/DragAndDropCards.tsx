@@ -3,11 +3,15 @@ import React from "react";
 const DragAndDropCards = () => {
   return (
     <div className="w-1/4 h-full flex flex-col justify-center">
-      <p className="flex items-start text-sm text-neutral-500">Not Started</p>
-      <div className="w-[60%] h-120 rounded-xl bg-neutral-100 p-2">
-        <Card />
-        <Card />
-        <Card />
+      <p className="flex items-start text-sm text-neutral-500 ml-1 mb-2">
+        in progress
+      </p>
+      <div className="w-[60%] h-120 rounded-xl bg-neutral-100 p-2 overflow-y-scroll no-scrollbar">
+        <Card cardTitle="build common module" tagName="dribble" />
+        <Card cardTitle="design card" tagName="dribble" />
+        <Card cardTitle="dashboard component" tagName="dribble" />
+        <Card cardTitle="dashboard component" tagName="dribble" />
+        <Card cardTitle="dashboard component" tagName="dribble" />
       </div>
     </div>
   );
@@ -15,15 +19,15 @@ const DragAndDropCards = () => {
 
 export default DragAndDropCards;
 
-const Card = () => {
+const Card = ({ cardTitle, tagName }) => {
   return (
     <div className="w-full h-28 p-3 cursor-grab rounded-lg bg-white mb-2 text-sm">
-      <p className="text-neutral-500 text-sm">Clothing Store</p>
+      <p className="text-sm font-medium">{cardTitle}</p>
       <p className="mt-1 text-xs border inline-block px-2 py-0.5 rounded-xl bg-[#dcfce7] text-[#16a34a]">
-        dribble
+        {tagName}
       </p>
       <div className="flex items-center justify-between mt-6">
-        <p>dec 21 2025</p>
+        <p className="text-xs text-neutral-500">dec 21 2025</p>
         <img
           className="rounded-full object-cover w-5 h-5"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMAEFg3mep11qtvO3r4NEPErM-52Iswos6Ug&s"
