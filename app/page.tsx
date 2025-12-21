@@ -6,6 +6,7 @@ import FloatingHoverCard from "@/components/FloatingHoverCard";
 import FramerMotionBasics from "@/components/FramerMotionBasics";
 import IconChainAnimation from "@/components/IconChainAnimation";
 import NavBarAnimation from "@/components/NavBarAnimation";
+import SlackCard from "@/components/SlackCard";
 import TextGlitterAnimation from "@/components/TextGlitterAnimation";
 import Image from "next/image";
 
@@ -18,7 +19,8 @@ export default function Home() {
       {/* <CardTiltAnimation /> */}
       {/* <IconChainAnimation /> */}
       {/* <FloatingHoverCard /> */}
-      <DragAndDropCards />
+      {/* <DragAndDropCards /> */}
+      <SlackCard />
     </div>
   );
 }
