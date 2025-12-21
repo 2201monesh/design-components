@@ -98,11 +98,11 @@ const Card = ({ cardTitle, tagName }) => {
     >
       <p className="text-sm font-medium">{cardTitle}</p>
 
-      <p className="mt-1 text-xs border inline-block px-2 py-0.5 rounded-xl bg-[#dcfce7] text-[#16a34a]">
+      {/* <p className="mt-1 text-xs border inline-block px-2 py-0.5 rounded-xl bg-[#dcfce7] text-[#16a34a]">
         {tagName}
-      </p>
+      </p> */}
 
-      <div className="flex items-center justify-between mt-6">
+      <div className="flex items-center justify-between">
         <p className="text-xs text-neutral-500">dec 21 2025</p>
         <img
           className="rounded-full object-cover w-5 h-5"
@@ -110,6 +110,10 @@ const Card = ({ cardTitle, tagName }) => {
           alt="img"
         />
       </div>
+
+      <p className="text-xs border inline-block px-2 py-0.5 rounded-xl bg-[#dcfce7] text-[#16a34a] mt-6">
+        {tagName}
+      </p>
     </motion.div>
   );
 };
