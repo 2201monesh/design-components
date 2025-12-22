@@ -9,7 +9,10 @@ import { IoMdArrowUp } from "react-icons/io";
 
 const SlackCard = () => {
   return (
-    <div className="w-[35%] h-96 border rounded-2xl border-neutral-300 bg-neutral-100">
+    <div
+      className="w-[35%] h-96 border rounded-2xl border-neutral-300 bg-neutral-100"
+      style={{ fontFamily: "var(--font-geist-sans)" }}
+    >
       <div className="h-[10%] w-full rounded-2xl flex items-center justify-between text-sm px-4">
         <div className="flex items-center justify-center text-neutral-500">
           <IoIosArrowBack size={16} className="mr-1 cursor-pointer" />
