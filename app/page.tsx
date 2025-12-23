@@ -9,6 +9,7 @@ import IconChainAnimation from "@/components/IconChainAnimation";
 import NavBarAnimation from "@/components/NavBarAnimation";
 import SlackCard from "@/components/SlackCard";
 import TextGlitterAnimation from "@/components/TextGlitterAnimation";
+import WorkspaceCardComponent from "@/components/WorkspaceCardComponent";
 import Image from "next/image";
 
 export default function Home() {
@@ -22,7 +23,7 @@ export default function Home() {
       {/* <FloatingHoverCard /> */}
       {/* <DragAndDropCards /> */}
       {/* <SlackCard /> */}
-      <FolderCardAnimation />
+      <WorkspaceCardComponent />
     </div>
   );
 }
