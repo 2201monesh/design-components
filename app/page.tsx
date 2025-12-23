@@ -3,6 +3,7 @@ import CardTiltAnimation from "@/components/CardTiltAnimation";
 import CardWidthAnimation from "@/components/CardWidthAnimation";
 import DragAndDropCards from "@/components/DragAndDropCards";
 import FloatingHoverCard from "@/components/FloatingHoverCard";
+import FolderCardAnimation from "@/components/FolderCardAnimation";
 import FramerMotionBasics from "@/components/FramerMotionBasics";
 import IconChainAnimation from "@/components/IconChainAnimation";
 import NavBarAnimation from "@/components/NavBarAnimation";
@@ -20,7 +21,8 @@ export default function Home() {
       {/* <IconChainAnimation /> */}
       {/* <FloatingHoverCard /> */}
       {/* <DragAndDropCards /> */}
-      <SlackCard />
+      {/* <SlackCard /> */}
+      <FolderCardAnimation />
     </div>
   );
 }

@@ -70,3 +70,20 @@ body {
   display: none;
   /* Chrome, Safari */
 }
+
+
+.slanted-shape {
+  clip-path: polygon(0% 0%,
+      /* top-left */
+      25% 0%,
+      /* straight top */
+      35% 12%,
+      /* slant down */
+      100% 12%,
+      /* continue straight */
+      100% 100%,
+      /* bottom-right */
+      0% 100%
+      /* bottom-left */
+    );
+}
