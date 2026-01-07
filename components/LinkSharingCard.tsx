@@ -28,6 +28,12 @@ const LinkSharingCard = () => {
           <RxCross2 />
         </div>
       </div>
+      <div className="p-3.5">
+        <span>Share this document:</span>
+      </div>
+      <div className="flex items-center justify-center">
+        <div className="w-[92%] h-14 border border-neutral-300 rounded-lg"></div>
+      </div>
     </div>
   );
 };
