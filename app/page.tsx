@@ -7,6 +7,7 @@ import FloatingHoverCard from "@/components/FloatingHoverCard";
 import FolderCardAnimation from "@/components/FolderCardAnimation";
 import FramerMotionBasics from "@/components/FramerMotionBasics";
 import IconChainAnimation from "@/components/IconChainAnimation";
+import LinkSharingCard from "@/components/LinkSharingCard";
 import NavBarAnimation from "@/components/NavBarAnimation";
 import SlackCard from "@/components/SlackCard";
 import TextGlitterAnimation from "@/components/TextGlitterAnimation";
@@ -25,7 +26,8 @@ export default function Home() {
       {/* <DragAndDropCards /> */}
       {/* <SlackCard /> */}
       {/* <WorkspaceCardComponent /> */}
-      <DraggableSlides />
+      {/* <DraggableSlides /> */}
+      <LinkSharingCard />
     </div>
   );
 }
