@@ -3,6 +3,8 @@ import { HiLockClosed } from "react-icons/hi";
 import { BsGlobeEuropeAfrica } from "react-icons/bs";
 import { RxCross2 } from "react-icons/rx";
 import { RiFileListFill } from "react-icons/ri";
+import { CiLock } from "react-icons/ci";
+import { GoPersonAdd } from "react-icons/go";
 
 const LinkSharingCard = () => {
   return (
@@ -45,7 +47,33 @@ const LinkSharingCard = () => {
               Text documents Created on 4:20 PM, September 9
             </p>
           </div>
-          <div>third</div>
+          <div className="text-black cursor-pointer">
+            <CiLock />
+          </div>
+        </div>
+      </div>
+      <div className="p-3.5 flex flex-col">
+        <span className="text-sm">Who has access:</span>
+        <span className="text-neutral-500 text-[10px]">
+          Choose how users can access your content online.{" "}
+          <span className="text-black cursor-pointer">Learn more.</span>
+        </span>
+      </div>
+      <div className="flex items-center justify-center">
+        <div className="w-[92%] h-14 border border-neutral-300 rounded-lg flex items-center justify-between px-2.5 py-2.5">
+          <div>
+            <div className="w-7 h-7 rounded-lg bg-neutral-100 bg-cover flex items-center justify-center cursor-pointer">
+              <GoPersonAdd size={14} />
+            </div>
+          </div>
+          <div className="flex flex-col justify-center h-full">
+            <p className="text-sm">Registered users with private link</p>
+          </div>
+          <div className="text-black cursor-pointer">
+            <p className="text-xs border border-neutral-300 rounded-md px-2.5 py-0.5">
+              view
+            </p>
+          </div>
         </div>
       </div>
     </div>
