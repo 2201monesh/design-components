@@ -5,7 +5,7 @@ import { RxCross2 } from "react-icons/rx";
 import { RiFileListFill } from "react-icons/ri";
 import { CiLock } from "react-icons/ci";
 import { GoPersonAdd } from "react-icons/go";
-import { FaPlus } from "react-icons/fa6";
+import { MdDeleteOutline } from "react-icons/md";
 
 const LinkSharingCard = () => {
   return (
@@ -88,6 +88,49 @@ const LinkSharingCard = () => {
           <div className="flex items-center justify-center border rounded-md text-xs px-2 bg-[#7b3aec] text-white">
             <span className="mr-1.5">{/* <FaPlus /> */}+</span>
             <button className="text-[11px]">Invite</button>
+          </div>
+        </div>
+      </div>
+      <div className="flex items-center justify-center mt-3">
+        <p className="w-[92%] text-[10px] text-neutral-500">
+          1 person has access:
+        </p>
+      </div>
+      <div className="flex items-center justify-center mt-4">
+        <div className="w-[92%] flex items-center justify-between">
+          <div className="flex items-center justify-center">
+            <div className="w-8 h-8 mr-2.5 rounded-full bg-neutral-400"></div>
+            <div>
+              <p className="text-xs">Sophia Reynolds</p>
+              <p className="text-[10px] text-neutral-500">sophia@starline.ai</p>
+            </div>
+          </div>
+          <div className="flex items-center justify-center">
+            <button className="text-xs border border-neutral-300 rounded-md px-2.5 py-0.5 mr-2 cursor-pointer">
+              Editor
+            </button>
+            <button className="text-xs border border-neutral-300 rounded-md px-2.5 py-0.5 cursor-pointer">
+              <MdDeleteOutline size={15} />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className="flex items-center justify-center mt-4">
+        <div className="w-[92%] flex items-center justify-between">
+          <div className="flex items-center justify-center">
+            <div className="w-8 h-8 mr-2.5 rounded-full bg-neutral-400"></div>
+            <div>
+              <p className="text-xs">Halle Elizabeth Grant</p>
+              <p className="text-[10px] text-neutral-500">halle@starline.ai</p>
+            </div>
+          </div>
+          <div className="flex items-center justify-center">
+            <button className="text-xs border border-neutral-300 rounded-md px-2.5 py-0.5 mr-2 cursor-pointer">
+              Editor
+            </button>
+            <button className="text-xs border border-neutral-300 rounded-md px-2.5 py-0.5 cursor-pointer">
+              <MdDeleteOutline size={15} />
+            </button>
           </div>
         </div>
       </div>
