@@ -14,7 +14,7 @@ const LinkSharingCard = () => {
   return (
     <div
       style={{ fontFamily: "var(--font-geist-sans)" }}
-      className="w-96 h-120 rounded-xl shadow border border-neutral-200"
+      className="w-96 h-122 rounded-xl shadow border border-neutral-200"
     >
       <div className="flex items-center justify-between border-b border-neutral-300 px-3.5 text-xs">
         <div className="flex items-center justify-center">
@@ -139,7 +139,7 @@ const LinkSharingCard = () => {
           </div>
         </div>
       </div>
-      <div className="border-t px-3.5 h-9.5 mt-4 border-neutral-300 flex items-center justify-between">
+      <div className="border-t px-3.5 h-11.5 mt-4 border-neutral-300 flex items-center justify-between">
         <div className="flex items-center justify-center border border-neutral-300 px-2 py-0.5 rounded-md cursor-pointer">
           <span>
             <IoEarthOutline size={12} className="mr-1.5" />
