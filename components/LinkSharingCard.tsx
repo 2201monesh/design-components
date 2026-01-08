@@ -5,6 +5,7 @@ import { RxCross2 } from "react-icons/rx";
 import { RiFileListFill } from "react-icons/ri";
 import { CiLock } from "react-icons/ci";
 import { GoPersonAdd } from "react-icons/go";
+import { FaPlus } from "react-icons/fa6";
 
 const LinkSharingCard = () => {
   return (
@@ -73,6 +74,20 @@ const LinkSharingCard = () => {
             <p className="text-xs border border-neutral-300 rounded-md px-2.5 py-0.5">
               view
             </p>
+          </div>
+        </div>
+      </div>
+      <div className="flex items-center justify-center mt-4">
+        <div className="w-[92%] flex">
+          {" "}
+          <input
+            type="text"
+            className="border border-neutral-300 rounded-md w-full mr-2 text-xs px-3 py-1"
+            placeholder="Enter name or email to invite"
+          />
+          <div className="flex items-center justify-center border rounded-md text-xs px-2 bg-[#7b3aec] text-white">
+            <span className="mr-1.5">{/* <FaPlus /> */}+</span>
+            <button className="text-[11px]">Invite</button>
           </div>
         </div>
       </div>
