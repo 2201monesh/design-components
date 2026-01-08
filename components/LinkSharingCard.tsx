@@ -71,7 +71,7 @@ const LinkSharingCard = () => {
               <GoPersonAdd size={14} />
             </div>
             <div className="flex flex-col justify-center h-full">
-              <p className="text-sm">Registered users with private link</p>
+              <p className="text-xs">Registered users with private link</p>
             </div>
           </div>
 
