@@ -6,6 +6,8 @@ import { RiFileListFill } from "react-icons/ri";
 import { CiLock } from "react-icons/ci";
 import { GoPersonAdd } from "react-icons/go";
 import { MdDeleteOutline } from "react-icons/md";
+import { LuCopy } from "react-icons/lu";
+import { FaRegCheckCircle } from "react-icons/fa";
 
 const LinkSharingCard = () => {
   return (
@@ -85,21 +87,21 @@ const LinkSharingCard = () => {
             className="border border-neutral-300 rounded-md w-full mr-2 text-xs px-3 py-1"
             placeholder="Enter name or email to invite"
           />
-          <div className="flex items-center justify-center border rounded-md text-xs px-2 bg-[#7b3aec] text-white">
+          <div className="flex items-center justify-center border rounded-md text-xs px-2 bg-[#7b3aec] text-white cursor-pointer">
             <span className="mr-1.5">{/* <FaPlus /> */}+</span>
-            <button className="text-[11px]">Invite</button>
+            <button className="text-[11px] cursor-pointer">Invite</button>
           </div>
         </div>
       </div>
       <div className="flex items-center justify-center mt-3">
         <p className="w-[92%] text-[10px] text-neutral-500">
-          1 person has access:
+          2 people has access:
         </p>
       </div>
       <div className="flex items-center justify-center mt-4">
         <div className="w-[92%] flex items-center justify-between">
           <div className="flex items-center justify-center">
-            <div className="w-8 h-8 mr-2.5 rounded-full bg-neutral-400"></div>
+            <div className="w-8 h-8 mr-2.5 rounded-full bg-neutral-400 bg-[url('https://plus.unsplash.com/premium_photo-1672201106204-58e9af7a2888?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover"></div>
             <div>
               <p className="text-xs">Sophia Reynolds</p>
               <p className="text-[10px] text-neutral-500">sophia@starline.ai</p>
@@ -118,7 +120,7 @@ const LinkSharingCard = () => {
       <div className="flex items-center justify-center mt-4">
         <div className="w-[92%] flex items-center justify-between">
           <div className="flex items-center justify-center">
-            <div className="w-8 h-8 mr-2.5 rounded-full bg-neutral-400"></div>
+            <div className="w-8 h-8 mr-2.5 rounded-full bg-neutral-400 bg-[url('https://images.unsplash.com/photo-1635776063328-153b13e3c245?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover"></div>
             <div>
               <p className="text-xs">Halle Elizabeth Grant</p>
               <p className="text-[10px] text-neutral-500">halle@starline.ai</p>
@@ -131,6 +133,28 @@ const LinkSharingCard = () => {
             <button className="text-xs border border-neutral-300 rounded-md px-2.5 py-0.5 cursor-pointer">
               <MdDeleteOutline size={15} />
             </button>
+          </div>
+        </div>
+      </div>
+      <div className="border-t px-3.5 h-9.5 mt-4 border-neutral-300 flex items-center justify-between">
+        <div className="flex items-center justify-center border border-neutral-300 px-2 py-0.5 rounded-md cursor-pointer">
+          <span>
+            <BsGlobeEuropeAfrica size={13} className="mr-1.5" />
+          </span>
+          <span className="text-xs">Make Public</span>
+        </div>
+        <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center border border-neutral-300 px-2 py-0.5 rounded-md cursor-pointer mr-2">
+            <span>
+              <LuCopy size={13} className="mr-1.5" />
+            </span>
+            <span className="text-xs">Copy Link</span>
+          </div>
+          <div className="flex items-center justify-center border border-neutral-300 px-2 py-0.5 rounded-md cursor-pointer">
+            <span>
+              <FaRegCheckCircle size={13} className="mr-1.5" />
+            </span>
+            <span className="text-xs">Done</span>
           </div>
         </div>
       </div>
