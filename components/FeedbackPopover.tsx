@@ -1,23 +1,50 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { PiChatText } from "react-icons/pi";
 import { MdKeyboardCommandKey } from "react-icons/md";
 
 const FeedbackPopover = () => {
+  const [open, setOpen] = useState(false);
+  const popupRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e: any) => {
+      if (popupRef.current && !popupRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    };
+
+    if (open) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [open]);
+
   return (
     <div style={{ fontFamily: "var(--font-geist-sans)" }}>
-      <ClickBar />
-      <FeedbackPopup />
+      {!open && <ClickBar onClick={() => setOpen(true)} />}
+
+      {open && (
+        <div ref={popupRef}>
+          <FeedbackPopup />
+        </div>
+      )}
     </div>
   );
 };
 
 export default FeedbackPopover;
 
-const ClickBar = () => {
+const ClickBar = ({ onClick }) => {
   return (
-    <div className="w-74 h-14 border border-neutral-300 rounded-3xl flex items-center justify-between px-3 py-2 cursor-pointer">
+    <div
+      onClick={onClick}
+      className="w-74 h-14 border border-neutral-300 rounded-3xl flex items-center justify-between px-3 py-2 cursor-pointer"
+    >
       <div className="flex items-center justify-center">
         <div className="w-3 h-3 rounded-full mr-2 bg-black"></div>
         <p className="text-sm">Morph surface</p>
@@ -32,7 +59,7 @@ const ClickBar = () => {
 const FeedbackPopup = () => {
   return (
     <div className="w-100 h-60 border border-neutral-300 rounded-3xl">
-      <div className="w-full border-b border-red-300 flex items-center justify-between px-5 py-3">
+      <div className="w-full flex items-center justify-between px-5 py-3">
         <div className="flex items-center justify-center">
           <PiChatText className="mr-2 text-neutral-500" />
           <p className="text-sm text-neutral-500">Morph surface</p>
@@ -46,7 +73,13 @@ const FeedbackPopup = () => {
           </div>
         </div>
       </div>
-      <div>bottom</div>
+      <div className="m-1">
+        <textarea
+          className="w-full h-44 border border-neutral-300 bg-neutral-100 rounded-2xl outline-0 px-2 text-sm py-2"
+          name=""
+          id=""
+        ></textarea>
+      </div>
     </div>
   );
 };
