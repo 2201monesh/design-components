@@ -30,7 +30,7 @@ export default function Home() {
       {/* <WorkspaceCardComponent /> */}
       {/* <DraggableSlides /> */}
       {/* <LinkSharingCard /> */}
-      <NotchBarAnimation />
+      {/* <NotchBarAnimation /> */}
       {/* <SearchCommandWithAI /> */}
     </div>
   );
