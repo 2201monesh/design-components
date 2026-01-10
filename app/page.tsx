@@ -3,6 +3,7 @@ import CardTiltAnimation from "@/components/CardTiltAnimation";
 import CardWidthAnimation from "@/components/CardWidthAnimation";
 import DragAndDropCards from "@/components/DragAndDropCards";
 import DraggableSlides from "@/components/DraggableSlides";
+import FeedbackPopover from "@/components/FeedbackPopover";
 import FloatingHoverCard from "@/components/FloatingHoverCard";
 import FolderCardAnimation from "@/components/FolderCardAnimation";
 import FramerMotionBasics from "@/components/FramerMotionBasics";
@@ -32,6 +33,7 @@ export default function Home() {
       {/* <LinkSharingCard /> */}
       {/* <NotchBarAnimation /> */}
       {/* <SearchCommandWithAI /> */}
+      <FeedbackPopover />
     </div>
   );
 }
