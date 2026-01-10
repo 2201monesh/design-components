@@ -36,7 +36,7 @@ const LinkSharingCard = () => {
         </div>
       </div>
       <div className="p-3.5">
-        <span>Share this document:</span>
+        <span>Share this document</span>
       </div>
       <div className="flex items-center justify-center">
         <div className="w-[92%] h-14 border border-neutral-300 rounded-lg flex items-center justify-between px-2.5 py-2.5">
@@ -58,7 +58,7 @@ const LinkSharingCard = () => {
         </div>
       </div>
       <div className="p-3.5 flex flex-col">
-        <span className="text-sm">Who has access:</span>
+        <span className="text-sm">Who has access</span>
         <span className="text-neutral-500 text-[10px]">
           Choose how users can access your content online.{" "}
           <span className="text-black cursor-pointer">Learn more.</span>
@@ -114,7 +114,7 @@ const LinkSharingCard = () => {
             <button className="text-xs border border-neutral-300 rounded-md px-2.5 py-0.5 mr-2 cursor-pointer">
               Editor
             </button>
-            <button className="text-xs border border-neutral-300 rounded-md px-2.5 py-0.5 cursor-pointer">
+            <button className="text-xs border border-neutral-300 rounded-md px-1 py-0.5 cursor-pointer">
               <MdDeleteOutline size={15} />
             </button>
           </div>
@@ -133,7 +133,7 @@ const LinkSharingCard = () => {
             <button className="text-xs border border-neutral-300 rounded-md px-2.5 py-0.5 mr-2 cursor-pointer">
               Editor
             </button>
-            <button className="text-xs border border-neutral-300 rounded-md px-2.5 py-0.5 cursor-pointer">
+            <button className="text-xs border border-neutral-300 rounded-md px-1 py-0.5 cursor-pointer">
               <MdDeleteOutline size={15} />
             </button>
           </div>

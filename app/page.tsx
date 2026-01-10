@@ -9,6 +9,8 @@ import FramerMotionBasics from "@/components/FramerMotionBasics";
 import IconChainAnimation from "@/components/IconChainAnimation";
 import LinkSharingCard from "@/components/LinkSharingCard";
 import NavBarAnimation from "@/components/NavBarAnimation";
+import NotchBarAnimation from "@/components/NotchBarAnimation";
+import SearchCommandWithAI from "@/components/SearchCommandWithAI";
 import SlackCard from "@/components/SlackCard";
 import TextGlitterAnimation from "@/components/TextGlitterAnimation";
 import WorkspaceCardComponent from "@/components/WorkspaceCardComponent";
@@ -27,7 +29,9 @@ export default function Home() {
       {/* <SlackCard /> */}
       {/* <WorkspaceCardComponent /> */}
       {/* <DraggableSlides /> */}
-      <LinkSharingCard />
+      {/* <LinkSharingCard /> */}
+      <NotchBarAnimation />
+      {/* <SearchCommandWithAI /> */}
     </div>
   );
 }
