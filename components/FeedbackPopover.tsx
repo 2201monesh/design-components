@@ -9,6 +9,13 @@ const FeedbackPopover = () => {
   const [open, setOpen] = useState(false);
   const popupRef = useRef(null);
 
+  const iosSpring = {
+    type: "spring",
+    stiffness: 300,
+    damping: 30,
+    mass: 0.6,
+  };
+
   useEffect(() => {
     const handleClickOutside = (e: any) => {
       if (popupRef.current && !popupRef.current.contains(e.target)) {
@@ -31,6 +38,11 @@ const FeedbackPopover = () => {
       {!open && (
         <motion.div
           layoutId="wrapper"
+          layout
+          transition={{ layout: iosSpring }}
+          initial={{ scale: 0.96, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          exit={{ scale: 0.96, opacity: 0 }}
           onClick={() => setOpen(true)}
           className="w-74 h-14 border border-neutral-300 rounded-3xl flex items-center justify-between px-3 py-2 cursor-pointer"
         >
@@ -46,7 +58,16 @@ const FeedbackPopover = () => {
 
       <AnimatePresence mode="popLayout">
         {open && (
-          <motion.div layoutId="wrapper" ref={popupRef}>
+          <motion.div
+            layoutId="wrapper"
+            layout
+            transition={{ layout: iosSpring }}
+            initial={{ scale: 0.97, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.97, opacity: 0 }}
+            ref={popupRef}
+            className="will-change-transform"
+          >
             {/* <FeedbackPopup /> */}
             <div className="w-100 h-60 border border-neutral-300 rounded-3xl">
               <div className="w-full flex items-center justify-between px-5 py-3">
