@@ -38,11 +38,6 @@ const FeedbackPopover = () => {
       {!open && (
         <motion.div
           layoutId="wrapper"
-          layout
-          transition={{ layout: iosSpring }}
-          initial={{ scale: 0.96, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          exit={{ scale: 0.96, opacity: 0 }}
           onClick={() => setOpen(true)}
           className="w-74 h-14 border border-neutral-300 rounded-3xl flex items-center justify-between px-3 py-2 cursor-pointer"
         >
@@ -52,27 +47,18 @@ const FeedbackPopover = () => {
               Feedback Popover
             </motion.p>
           </div>
-          <motion.div
-            layoutId="enter"
+          <div
+            // layoutId="enter"
             className="bg-neutral-50 px-2.5 py-1.5 rounded-xl text-sm text-neutral-500"
           >
             Enter
-          </motion.div>
+          </div>
         </motion.div>
       )}
 
       <AnimatePresence mode="popLayout">
         {open && (
-          <motion.div
-            layoutId="wrapper"
-            layout
-            transition={{ layout: iosSpring }}
-            initial={{ scale: 0.97, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.97, opacity: 0 }}
-            ref={popupRef}
-            className="will-change-transform"
-          >
+          <motion.div layoutId="wrapper" ref={popupRef}>
             {/* <FeedbackPopup /> */}
             <div className="w-100 h-60 border border-neutral-300 rounded-3xl">
               <div className="w-full flex items-center justify-between px-5 py-3">
@@ -90,7 +76,7 @@ const FeedbackPopover = () => {
                     <MdKeyboardCommandKey size={18} />
                   </div>
                   <motion.div
-                    layoutId="enter"
+                    // layoutId="enter"
                     className="bg-neutral-50 text-neutral-500 text-sm px-3 py-1 rounded-lg cursor-pointer"
                   >
                     Enter

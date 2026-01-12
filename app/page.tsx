@@ -8,6 +8,7 @@ import FloatingHoverCard from "@/components/FloatingHoverCard";
 import FolderCardAnimation from "@/components/FolderCardAnimation";
 import FramerMotionBasics from "@/components/FramerMotionBasics";
 import IconChainAnimation from "@/components/IconChainAnimation";
+import IosSideNotch from "@/components/IosSideNotch";
 import LinkSharingCard from "@/components/LinkSharingCard";
 import NavBarAnimation from "@/components/NavBarAnimation";
 import NotchBarAnimation from "@/components/NotchBarAnimation";
@@ -33,7 +34,8 @@ export default function Home() {
       {/* <LinkSharingCard /> */}
       {/* <NotchBarAnimation /> */}
       {/* <SearchCommandWithAI /> */}
-      <FeedbackPopover />
+      {/* <FeedbackPopover /> */}
+      <IosSideNotch />
     </div>
   );
 }
