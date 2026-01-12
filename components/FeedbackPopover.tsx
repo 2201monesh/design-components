@@ -54,7 +54,7 @@ const FeedbackPopover = () => {
           </div>
           <motion.div
             layoutId="enter"
-            className="bg-neutral-100 px-2.5 py-1.5 rounded-xl text-sm text-neutral-500"
+            className="bg-neutral-50 px-2.5 py-1.5 rounded-xl text-sm text-neutral-500"
           >
             Enter
           </motion.div>
@@ -86,12 +86,12 @@ const FeedbackPopover = () => {
                   </motion.p>
                 </div>
                 <div className="flex items-center justify-center">
-                  <div className="bg-neutral-100 p-1.5 rounded-xl text-neutral-500 mr-2 cursor-pointer">
+                  <div className="bg-neutral-50 p-1.5 rounded-xl text-neutral-500 mr-2 cursor-pointer">
                     <MdKeyboardCommandKey size={18} />
                   </div>
                   <motion.div
                     layoutId="enter"
-                    className="bg-neutral-100 text-neutral-500 text-sm px-3 py-1 rounded-lg cursor-pointer"
+                    className="bg-neutral-50 text-neutral-500 text-sm px-3 py-1 rounded-lg cursor-pointer"
                   >
                     Enter
                   </motion.div>
@@ -100,7 +100,7 @@ const FeedbackPopover = () => {
               <div className="m-1">
                 <textarea
                   placeholder="Enter feedback here"
-                  className="w-full h-44 border border-neutral-300 bg-neutral-100 rounded-[20px] outline-0 px-4 text-sm py-3 resize-none"
+                  className="w-full h-44 border border-neutral-200 bg-neutral-50 rounded-[20px] outline-0 px-4 text-sm py-3 resize-none"
                   name=""
                   id=""
                 ></textarea>
