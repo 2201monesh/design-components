@@ -19,7 +19,19 @@ const IosSideNotch = () => {
             <p className="text-white text-xs">Mon Jun 5 9:41 AM</p>
           </div>
         </div>
-        <div className="h-full w-111 bg-blue-300"></div>
+        <div className="h-full w-111 bg-blue-300">
+          <div className="w-full h-14 flex bg-black">
+            <div className="h-full w-60 bg-black">
+              <div className="w-full h-full bg-blue-300 rounded-tr-2xl"></div>
+            </div>
+            <div className="h-full w-58 bg-blue-300">
+              <div className="h-full w-full bg-black rounded-b-2xl"></div>
+            </div>
+            <div className="h-full w-5 bg-black">
+              <div className="h-full w-full bg-blue-300 rounded-tl-2xl"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
