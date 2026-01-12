@@ -99,7 +99,8 @@ const FeedbackPopover = () => {
               </div>
               <div className="m-1">
                 <textarea
-                  className="w-full h-44 border border-neutral-300 bg-neutral-100 rounded-[20px] outline-0 px-2 text-sm py-2"
+                  placeholder="Enter feedback here"
+                  className="w-full h-44 border border-neutral-300 bg-neutral-100 rounded-[20px] outline-0 px-4 text-sm py-3 resize-none"
                   name=""
                   id=""
                 ></textarea>
