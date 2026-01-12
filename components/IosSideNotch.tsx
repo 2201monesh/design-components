@@ -26,7 +26,17 @@ const IosSideNotch = () => {
               <div className="w-full h-full bg-blue-300 rounded-tr-2xl"></div>
             </div>
             <div className="h-full w-65 bg-blue-300">
-              <div className="h-full w-full bg-black rounded-b-2xl"></div>
+              <div className="h-full w-full bg-black rounded-b-2xl flex items-start justify-between text-white px-3">
+                <div className="w-7 h-7 border border-gray-600 flex items-center justify-center rounded-md mt-2 bg-[#113039]">
+                  <img
+                    src="https://images.icon-icons.com/2642/PNG/512/google_mail_gmail_logo_icon_159346.png"
+                    alt="img"
+                    width={22}
+                  />
+                </div>
+                <div className="mt-2">2</div>
+                <div className="mt-2">3</div>
+              </div>
             </div>
             <div className="h-full w-4 bg-black">
               <div className="h-full w-full bg-blue-300 rounded-tl-2xl"></div>
