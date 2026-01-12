@@ -44,8 +44,8 @@ const IosSideNotch = () => {
                     Meeting with John(Last discussed Project X)
                   </p>
                 </div>
-                <div className="mt-2">
-                  <button className="text-[8px] w-14 text-white px-1.5 rounded-[3px] py-0.5 bg-[#1d1d1d] border border-gray-600">
+                <div className="mt-1">
+                  <button className="cursor-pointer text-[8px] w-14 text-white px-1.5 rounded-[3px] py-0.5 bg-[#1d1d1d] border border-gray-600">
                     Calendar
                   </button>
                 </div>
