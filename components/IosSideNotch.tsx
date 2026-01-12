@@ -2,6 +2,7 @@ import { IoWifi } from "react-icons/io5";
 import { IoSearchSharp } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
 import { IoIosBatteryDead } from "react-icons/io";
+import { HiDotsHorizontal } from "react-icons/hi";
 
 const IosSideNotch = () => {
   return (
@@ -26,16 +27,28 @@ const IosSideNotch = () => {
               <div className="w-full h-full bg-blue-300 rounded-tr-2xl"></div>
             </div>
             <div className="h-full w-65 bg-blue-300">
-              <div className="h-full w-full bg-black rounded-b-2xl flex items-start justify-between text-white px-3">
-                <div className="w-7 h-7 border border-gray-600 flex items-center justify-center rounded-md mt-2 bg-[#113039]">
+              <div className="h-full w-full bg-black rounded-b-2xl flex items-start text-white px-3">
+                <div className="w-7 h-7 border border-gray-600 flex items-center justify-center rounded-md mt-2 bg-[#113039] mr-1.5">
                   <img
                     src="https://images.icon-icons.com/2642/PNG/512/google_mail_gmail_logo_icon_159346.png"
                     alt="img"
                     width={22}
                   />
                 </div>
-                <div className="mt-2">2</div>
-                <div className="mt-2">3</div>
+                <div className="mt-2 w-25 mr-3.5">
+                  <div className="flex items-center justify-between">
+                    <p className="text-[10px]">Recall</p>
+                    <HiDotsHorizontal size={12} />
+                  </div>
+                  <p className="text-[8px] text-gray-400">
+                    Meeting with John(Last discussed Project X)
+                  </p>
+                </div>
+                <div className="mt-2">
+                  <button className="text-[8px] w-14 text-white px-1.5 rounded-[3px] py-0.5 bg-[#1d1d1d] border border-gray-600">
+                    Calendar
+                  </button>
+                </div>
               </div>
             </div>
             <div className="h-full w-4 bg-black">
