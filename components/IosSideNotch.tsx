@@ -10,8 +10,9 @@ const IosSideNotch = () => {
       className="w-130 h-90 border border-neutral-300 flex items-end bg-[#e9e9e9]"
     >
       <div className="w-115 h-75 border border-neutral-300 rounded-tr-3xl bg-black overflow-y-hidden">
-        <div className="w-full h-10 flex items-end justify-end pr-10 text-white pb-1">
+        <div className="w-full h-10 flex items-end justify-end pr-6 text-white pb-2">
           <div className="flex items-center justify-center">
+            <div className="rounded-full w-4 h-4 mr-3 mt-0.5 bg-blue-300"></div>
             <IoWifi className="mr-3" />
             <IoSearchSharp className="mr-3" />
             <CgProfile className="mr-3" />
@@ -21,13 +22,13 @@ const IosSideNotch = () => {
         </div>
         <div className="h-full w-111 bg-blue-300">
           <div className="w-full h-14 flex bg-black">
-            <div className="h-full w-60 bg-black">
+            <div className="h-full w-57 bg-black">
               <div className="w-full h-full bg-blue-300 rounded-tr-2xl"></div>
             </div>
-            <div className="h-full w-58 bg-blue-300">
+            <div className="h-full w-65 bg-blue-300">
               <div className="h-full w-full bg-black rounded-b-2xl"></div>
             </div>
-            <div className="h-full w-5 bg-black">
+            <div className="h-full w-4 bg-black">
               <div className="h-full w-full bg-blue-300 rounded-tl-2xl"></div>
             </div>
           </div>
