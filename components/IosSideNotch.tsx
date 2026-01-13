@@ -65,8 +65,8 @@ const IosSideNotch = () => {
                 </div>
                 <div className="mt-1">
                   {/* <button className="cursor-pointer text-[8px] w-14 text-white px-1.5 rounded-[3px] py-0.5 bg-[#1d1d1d] border border-gray-600"> Calendar </button> */}
-                  <button className="cursor-pointer text-[11px] text-white px-1.5 py-0.5 rounded-md bg-gradient-to-b from-[#2a2a2a] via-[#1c1c1c] to-[#0f0f0f] border border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.15),0_2px_6px_rgba(0,0,0,0.6)] hover:brightness-110 active:translate-y-[1px] transition-all">
-                    Calendar
+                  <button className="cursor-pointer text-[8px] w-18 h-6 text-white px-1.5 py-0.5 rounded-md bg-gradient-to-b from-[#2a2a2a] via-[#1c1c1c] to-[#0f0f0f] hover:brightness-110 active:translate-y-[1px] transition-all">
+                    Open Calendar
                   </button>
                 </div>
               </div>
