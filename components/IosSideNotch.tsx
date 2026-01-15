@@ -1,7 +1,6 @@
 import { IoWifi } from "react-icons/io5";
 import { IoSearchSharp } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
-import { IoIosBatteryDead } from "react-icons/io";
 import { HiDotsHorizontal } from "react-icons/hi";
 const IosSideNotch = () => {
   return (
@@ -24,7 +23,7 @@ const IosSideNotch = () => {
               </div>
             </div>
             <IoWifi className="mr-3" /> <IoSearchSharp className="mr-3" />
-            <CgProfile className="mr-3" /> {/* <IoIosBatteryDead /> */}
+            <CgProfile className="mr-3" />
             <p className="text-white text-xs">
               Tue Jan <span className="mr-1">7</span> 9:41 AM
             </p>
@@ -64,7 +63,6 @@ const IosSideNotch = () => {
                   </p>
                 </div>
                 <div className="mt-1">
-                  {/* <button className="cursor-pointer text-[8px] w-14 text-white px-1.5 rounded-[3px] py-0.5 bg-[#1d1d1d] border border-gray-600"> Calendar </button> */}
                   <button className="cursor-pointer text-[8px] w-18 h-6 text-white px-1.5 py-0.5 rounded-md bg-gradient-to-b from-[#2a2a2a] via-[#1c1c1c] to-[#0f0f0f] hover:brightness-110 active:translate-y-[1px] transition-all">
                     Open Calendar
                   </button>
