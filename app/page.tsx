@@ -1,6 +1,7 @@
 import AnimatedDrawer from "@/components/AnimatedDrawer";
 import CardTiltAnimation from "@/components/CardTiltAnimation";
 import CardWidthAnimation from "@/components/CardWidthAnimation";
+import ComboBox from "@/components/ComboBox";
 import DragAndDropCards from "@/components/DragAndDropCards";
 import DraggableSlides from "@/components/DraggableSlides";
 import FeedbackPopover from "@/components/FeedbackPopover";
@@ -35,7 +36,8 @@ export default function Home() {
       {/* <NotchBarAnimation /> */}
       {/* <SearchCommandWithAI /> */}
       {/* <FeedbackPopover /> */}
-      <IosSideNotch />
+      {/* <IosSideNotch /> */}
+      <ComboBox />
     </div>
   );
 }
