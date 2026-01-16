@@ -21,7 +21,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen items-center justify-center">
+    <div className="flex flex-col items-center justify-center w-screen h-screen">
       {/* <FramerMotionBasics /> */}
       {/* <NavBarAnimation /> */}
       {/* <TextGlitterAnimation /> */}
