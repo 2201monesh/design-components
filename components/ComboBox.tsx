@@ -218,7 +218,7 @@ const ComboBox = () => {
                 onClick={() => setView("add")}
                 className="w-full h-[12%] bg-[#f6f6f6] rounded-b-lg border-t border-t-neutral-200 flex items-center justify-start px-4 cursor-pointer"
               >
-                <span className="mr-2 w-5 h-5 flex items-center justify-center">
+                <span className="mr-1.5 w-5 h-5 flex items-center justify-center">
                   <FaPlus size={14} className="text-neutral-700" />
                 </span>
                 <span className="text-sm">Create company</span>
@@ -248,7 +248,7 @@ const ComboBox = () => {
                   className="flex items-center justify-center cursor-pointer"
                   onClick={() => setView("list")}
                 >
-                  <span className="mr-4">
+                  <span className="mr-3">
                     <IoIosArrowBack
                       className="text-neutral-500 mt-0.5 cursor-pointer"
                       size={18}
@@ -256,7 +256,7 @@ const ComboBox = () => {
                   </span>
                   <span className="text-sm">Add a company</span>
                 </div>
-                <div className="px-2.5 py-0.5 border text-sm rounded-sm bg-[#00751f] text-white cursor-pointer">
+                <div className="px-2.5 py-0.5 border text-sm rounded-sm bg-neutral-200 text-neutral-500 active:scale-[0.97] border-neutral-300 cursor-pointer">
                   Add
                 </div>
               </motion.div>
@@ -265,7 +265,7 @@ const ComboBox = () => {
                 className="w-full bg-white h-12 rounded-t-lg flex items-center justify-between px-4"
               >
                 <div className="flex items-center justify-center cursor-pointer">
-                  <span className="mr-4">
+                  <span className="mr-3">
                     <GoOrganization
                       className="text-neutral-400 mt-0.5 cursor-pointer"
                       size={18}
@@ -279,7 +279,7 @@ const ComboBox = () => {
                 className="w-full bg-white h-12 rounded-b-lg flex items-center justify-between px-4"
               >
                 <div className="flex items-center justify-center cursor-pointer">
-                  <span className="mr-4">
+                  <span className="mr-3">
                     <TbWorldSearch
                       className="text-neutral-400 mt-0.5 cursor-pointer"
                       size={18}
