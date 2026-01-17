@@ -2,6 +2,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { IoIosArrowBack } from "react-icons/io";
+import { GoOrganization } from "react-icons/go";
+import { TbWorldSearch } from "react-icons/tb";
 
 const companies = [
   {
@@ -37,13 +39,13 @@ const companies = [
   {
     id: 6,
     name: "Microsoft",
-    email: "support@microsoft.com",
+    email: "help@microsoft.com",
     logo: "/microsoft-color.png",
   },
   {
     id: 7,
     name: "Meta",
-    email: "support@meta.com",
+    email: "hello@meta.com",
     logo: "/meta-color.png",
   },
   {
@@ -188,6 +190,34 @@ const ComboBox = () => {
               </div>
               <div className="px-2.5 py-0.5 border text-sm rounded-sm bg-[#00751f] text-white cursor-pointer">
                 Add
+              </div>
+            </div>
+            <div className="w-full bg-white h-12 rounded-t-lg flex items-center justify-between px-4">
+              <div className="flex items-center justify-center cursor-pointer">
+                <span className="mr-4">
+                  <GoOrganization
+                    className="text-neutral-400 mt-0.5 cursor-pointer"
+                    size={18}
+                  />
+                </span>
+                <span className="text-sm text-neutral-400">Name</span>
+              </div>
+              {/* <div className="px-2.5 py-0.5 border text-sm rounded-sm bg-[#00751f] text-white cursor-pointer">
+                Add
+              </div> */}
+            </div>
+            <div className="w-full bg-white h-12 rounded-b-lg flex items-center justify-between px-4">
+              <div className="flex items-center justify-center cursor-pointer">
+                <span className="mr-4">
+                  <TbWorldSearch
+                    className="text-neutral-400 mt-0.5 cursor-pointer"
+                    size={18}
+                  />
+                </span>
+                <span className="text-sm text-neutral-400">company.com</span>
+              </div>
+              <div className="text-sm text-neutral-300 cursor-pointer">
+                optional
               </div>
             </div>
           </div>
