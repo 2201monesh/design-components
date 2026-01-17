@@ -113,7 +113,6 @@ const ComboBox = () => {
         />
         <div className="w-[25%] h-100 border rounded-lg border-neutral-200 bg-white shadow-sm">
           <div className="w-full h-[88%] overflow-y-scroll [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            {/* <CompanyInfo /> */}
             {companies.map((company) => (
               <CompanyInfo
                 key={company.id}
@@ -123,7 +122,15 @@ const ComboBox = () => {
               />
             ))}
           </div>
-          <div className="w-full h-[12%] bg-[#f6f6f6] rounded-b-lg border-t border-t-neutral-200"></div>
+          <div className="w-full h-[12%] bg-[#f6f6f6] rounded-b-lg border-t border-t-neutral-200 flex items-center justify-start px-4 cursor-pointer">
+            {/* <div className="w-6 h-6 rounded-full border"> */}
+            <span className="mr-2 w-5 h-5 rounded-full border flex items-center justify-center">
+              <span className="mb-0.5 mr-[0.4px]">+</span>
+            </span>
+            {/* </div> */}
+
+            <span>Create company</span>
+          </div>
         </div>
       </div>
     </div>
@@ -143,11 +150,11 @@ const CompanyInfo = ({ name, email, logo }: CompanyInfoProps) => {
     <div className="w-full px-4 py-1.5 flex items-center justify-between hover:bg-[#f6f6f6]">
       <div className="flex items-center justify-center">
         <div className="w-7 h-7 rounded-lg flex items-center justify-center bg-black mr-2">
-          <img className="w-5 h-5 bg-cover" src={logo} alt="img" />
+          <img className="w-4 h-4 bg-cover" src={logo} alt="img" />
         </div>
-        <span>{name}</span>
+        <span className="text-sm">{name}</span>
       </div>
-      <div className="text-neutral-500">{email}</div>
+      <div className="text-neutral-500 text-sm">{email}</div>
     </div>
   );
 };
