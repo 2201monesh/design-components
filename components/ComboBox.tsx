@@ -138,90 +138,100 @@ const ComboBox = () => {
           className="outline-neutral-300 w-[25%] px-4 py-2 shadow-sm rounded-lg bg-white mt-22"
           placeholder="Search companies..."
         />
-        {view == "list" && (
-          <motion.div
-            initial={false}
-            animate={{
-              height: view === "list" ? 320 : view === "add" ? 144 : 0,
-              opacity: view === "closed" ? 0 : 1,
-            }}
-            transition={{
-              duration: 0.22,
-              ease: [0.32, 0.72, 0, 1], // iOS-like
-            }}
-            className="w-[25%] h-100 border rounded-lg border-neutral-200 bg-white shadow-sm mt-1.5"
-          >
-            <div className="w-full h-[88%] overflow-y-scroll [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-              {companies.map((company) => (
-                <CompanyInfo
-                  key={company.id}
-                  name={company.name}
-                  email={company.email}
-                  logo={company.logo}
-                />
-              ))}
-            </div>
-            <div
-              onClick={() => setView("add")}
-              className="w-full h-[12%] bg-[#f6f6f6] rounded-b-lg border-t border-t-neutral-200 flex items-center justify-start px-4 cursor-pointer"
+        <AnimatePresence mode="popLayout">
+          {view == "list" && (
+            <motion.div
+              key="list"
+              layoutId="motion"
+              // initial={{ height: 0, opacity: 0 }}
+              // animate={{ height: 400, opacity: 1 }}
+              // exit={{ height: 0, opacity: 0 }}
+              transition={{
+                duration: 0.15,
+                ease: "easeInOut",
+              }}
+              className="w-[25%] h-100 border rounded-lg border-neutral-200 bg-white shadow-sm mt-1.5"
             >
-              <span className="mr-2 w-5 h-5 rounded-full border flex items-center justify-center">
-                <span className="mb-0.5 mr-[0.4px]">+</span>
-              </span>
-              <span className="text-sm">Create company</span>
-            </div>
-          </motion.div>
-        )}
-
-        {view == "add" && (
-          <div className="w-[25%] h-36 bg-white border mt-1.5 rounded-lg border-neutral-200 shadow-sm">
-            <div className="w-full bg-[#f6f6f6] h-12 rounded-t-lg flex items-center justify-between px-4">
+              <div className="w-full h-[88%] overflow-y-scroll [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                {companies.map((company) => (
+                  <CompanyInfo
+                    key={company.id}
+                    name={company.name}
+                    email={company.email}
+                    logo={company.logo}
+                  />
+                ))}
+              </div>
               <div
-                className="flex items-center justify-center cursor-pointer"
-                onClick={() => setView("list")}
+                onClick={() => setView("add")}
+                className="w-full h-[12%] bg-[#f6f6f6] rounded-b-lg border-t border-t-neutral-200 flex items-center justify-start px-4 cursor-pointer"
               >
-                <span className="mr-6">
-                  <IoIosArrowBack
-                    className="text-neutral-500 mt-0.5 cursor-pointer"
-                    size={18}
-                  />
+                <span className="mr-2 w-5 h-5 rounded-full border flex items-center justify-center">
+                  <span className="mb-0.5 mr-[0.4px]">+</span>
                 </span>
-                <span className="text-sm">Add a company</span>
+                <span className="text-sm">Create company</span>
               </div>
-              <div className="px-2.5 py-0.5 border text-sm rounded-sm bg-[#00751f] text-white cursor-pointer">
-                Add
+            </motion.div>
+          )}
+
+          {view == "add" && (
+            <motion.div
+              key="add"
+              layoutId="motion"
+              // initial={{ height: 0, opacity: 0 }}
+              // animate={{ height: "auto", opacity: 1 }}
+              // exit={{ height: 0, opacity: 0 }}
+              transition={{
+                duration: 0.15,
+                ease: "easeInOut",
+              }}
+              className="w-[25%] h-36 bg-white border mt-1.5 rounded-lg border-neutral-200 shadow-sm"
+            >
+              <div className="w-full bg-[#f6f6f6] h-12 rounded-t-lg flex items-center justify-between px-4">
+                <div
+                  className="flex items-center justify-center cursor-pointer"
+                  onClick={() => setView("list")}
+                >
+                  <span className="mr-6">
+                    <IoIosArrowBack
+                      className="text-neutral-500 mt-0.5 cursor-pointer"
+                      size={18}
+                    />
+                  </span>
+                  <span className="text-sm">Add a company</span>
+                </div>
+                <div className="px-2.5 py-0.5 border text-sm rounded-sm bg-[#00751f] text-white cursor-pointer">
+                  Add
+                </div>
               </div>
-            </div>
-            <div className="w-full bg-white h-12 rounded-t-lg flex items-center justify-between px-4">
-              <div className="flex items-center justify-center cursor-pointer">
-                <span className="mr-4">
-                  <GoOrganization
-                    className="text-neutral-400 mt-0.5 cursor-pointer"
-                    size={18}
-                  />
-                </span>
-                <span className="text-sm text-neutral-400">Name</span>
+              <div className="w-full bg-white h-12 rounded-t-lg flex items-center justify-between px-4">
+                <div className="flex items-center justify-center cursor-pointer">
+                  <span className="mr-4">
+                    <GoOrganization
+                      className="text-neutral-400 mt-0.5 cursor-pointer"
+                      size={18}
+                    />
+                  </span>
+                  <span className="text-sm text-neutral-400">Name</span>
+                </div>
               </div>
-              {/* <div className="px-2.5 py-0.5 border text-sm rounded-sm bg-[#00751f] text-white cursor-pointer">
-                Add
-              </div> */}
-            </div>
-            <div className="w-full bg-white h-12 rounded-b-lg flex items-center justify-between px-4">
-              <div className="flex items-center justify-center cursor-pointer">
-                <span className="mr-4">
-                  <TbWorldSearch
-                    className="text-neutral-400 mt-0.5 cursor-pointer"
-                    size={18}
-                  />
-                </span>
-                <span className="text-sm text-neutral-400">company.com</span>
+              <div className="w-full bg-white h-12 rounded-b-lg flex items-center justify-between px-4">
+                <div className="flex items-center justify-center cursor-pointer">
+                  <span className="mr-4">
+                    <TbWorldSearch
+                      className="text-neutral-400 mt-0.5 cursor-pointer"
+                      size={18}
+                    />
+                  </span>
+                  <span className="text-sm text-neutral-400">company.com</span>
+                </div>
+                <div className="text-sm text-neutral-300 cursor-pointer">
+                  optional
+                </div>
               </div>
-              <div className="text-sm text-neutral-300 cursor-pointer">
-                optional
-              </div>
-            </div>
-          </div>
-        )}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );
