@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { IoIosArrowBack } from "react-icons/io";
 import { GoOrganization } from "react-icons/go";
 import { TbWorldSearch } from "react-icons/tb";
+import { FaPlus } from "react-icons/fa6";
 
 const companies = [
   {
@@ -111,6 +112,46 @@ const ComboBox = () => {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const [selectedCompany, setSelectedCompany] = useState("");
 
+  const container = {
+    hidden: { x: -6, opacity: 0 },
+    show: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.15,
+        ease: "easeInOut",
+        when: "beforeChildren",
+        staggerChildren: 0.08,
+      },
+    },
+  };
+
+  const containerList = {
+    hidden: { x: -6, opacity: 0 },
+    show: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.15,
+        ease: "easeInOut",
+        when: "beforeChildren",
+        staggerChildren: 0.04,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { x: -6, opacity: 0 },
+    show: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.12,
+        ease: "easeOut",
+      },
+    },
+  };
+
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       if (
@@ -152,7 +193,14 @@ const ComboBox = () => {
               }}
               className="w-[25%] h-100 border rounded-lg border-neutral-200 bg-white shadow-sm mt-1.5"
             >
-              <div className="w-full h-[88%] overflow-y-scroll [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              <motion.div
+                key="parentDivList"
+                initial="hidden"
+                animate="show"
+                exit="hidden"
+                variants={containerList}
+                className="w-full h-[88%] overflow-y-scroll [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              >
                 {companies.map((company) => (
                   <CompanyInfo
                     key={company.id}
@@ -165,13 +213,13 @@ const ComboBox = () => {
                     }}
                   />
                 ))}
-              </div>
+              </motion.div>
               <div
                 onClick={() => setView("add")}
                 className="w-full h-[12%] bg-[#f6f6f6] rounded-b-lg border-t border-t-neutral-200 flex items-center justify-start px-4 cursor-pointer"
               >
-                <span className="mr-2 w-5 h-5 rounded-full border flex items-center justify-center">
-                  <span className="mb-0.5 mr-[0.4px]">+</span>
+                <span className="mr-2 w-5 h-5 flex items-center justify-center">
+                  <FaPlus size={14} className="text-neutral-700" />
                 </span>
                 <span className="text-sm">Create company</span>
               </div>
@@ -182,18 +230,25 @@ const ComboBox = () => {
             <motion.div
               key="add"
               layoutId="motion"
+              initial="hidden"
+              animate="show"
+              exit="hidden"
+              variants={container}
               transition={{
                 duration: 0.15,
                 ease: "easeInOut",
               }}
               className="w-[25%] h-36 bg-white border mt-1.5 rounded-lg border-neutral-200 shadow-sm"
             >
-              <div className="w-full bg-[#f6f6f6] h-12 rounded-t-lg flex items-center justify-between px-4">
+              <motion.div
+                variants={item}
+                className="w-full bg-[#f6f6f6] h-12 rounded-t-lg flex items-center justify-between px-4"
+              >
                 <div
                   className="flex items-center justify-center cursor-pointer"
                   onClick={() => setView("list")}
                 >
-                  <span className="mr-6">
+                  <span className="mr-4">
                     <IoIosArrowBack
                       className="text-neutral-500 mt-0.5 cursor-pointer"
                       size={18}
@@ -204,8 +259,11 @@ const ComboBox = () => {
                 <div className="px-2.5 py-0.5 border text-sm rounded-sm bg-[#00751f] text-white cursor-pointer">
                   Add
                 </div>
-              </div>
-              <div className="w-full bg-white h-12 rounded-t-lg flex items-center justify-between px-4">
+              </motion.div>
+              <motion.div
+                variants={item}
+                className="w-full bg-white h-12 rounded-t-lg flex items-center justify-between px-4"
+              >
                 <div className="flex items-center justify-center cursor-pointer">
                   <span className="mr-4">
                     <GoOrganization
@@ -215,8 +273,11 @@ const ComboBox = () => {
                   </span>
                   <span className="text-sm text-neutral-400">Name</span>
                 </div>
-              </div>
-              <div className="w-full bg-white h-12 rounded-b-lg flex items-center justify-between px-4">
+              </motion.div>
+              <motion.div
+                variants={item}
+                className="w-full bg-white h-12 rounded-b-lg flex items-center justify-between px-4"
+              >
                 <div className="flex items-center justify-center cursor-pointer">
                   <span className="mr-4">
                     <TbWorldSearch
@@ -229,7 +290,7 @@ const ComboBox = () => {
                 <div className="text-sm text-neutral-300 cursor-pointer">
                   optional
                 </div>
-              </div>
+              </motion.div>
             </motion.div>
           )}
         </AnimatePresence>
@@ -247,9 +308,22 @@ type CompanyInfoProps = {
   onSelect: () => void;
 };
 
+const item = {
+  hidden: { x: -6, opacity: 0 },
+  show: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.12,
+      ease: "easeOut",
+    },
+  },
+};
+
 const CompanyInfo = ({ name, email, logo, onSelect }: CompanyInfoProps) => {
   return (
-    <div
+    <motion.div
+      variants={item}
       onClick={onSelect}
       className="w-full px-4 py-1.5 flex items-center justify-between hover:bg-[#f6f6f6] cursor-pointer"
     >
@@ -260,6 +334,6 @@ const CompanyInfo = ({ name, email, logo, onSelect }: CompanyInfoProps) => {
         <span className="text-sm">{name}</span>
       </div>
       <div className="text-neutral-500 text-sm">{email}</div>
-    </div>
+    </motion.div>
   );
 };
