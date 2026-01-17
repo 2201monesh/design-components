@@ -109,6 +109,7 @@ type View = "closed" | "list" | "add";
 const ComboBox = () => {
   const [view, setView] = useState<View>("closed");
   const wrapperRef = useRef<HTMLDivElement>(null);
+  const [selectedCompany, setSelectedCompany] = useState("");
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -134,6 +135,8 @@ const ComboBox = () => {
       >
         <input
           type="text"
+          value={selectedCompany}
+          onChange={(e) => setSelectedCompany(e.target.value)}
           onFocus={() => setView("list")}
           className="outline-neutral-300 w-[25%] px-4 py-2 shadow-sm rounded-lg bg-white mt-22"
           placeholder="Search companies..."
@@ -143,9 +146,6 @@ const ComboBox = () => {
             <motion.div
               key="list"
               layoutId="motion"
-              // initial={{ height: 0, opacity: 0 }}
-              // animate={{ height: 400, opacity: 1 }}
-              // exit={{ height: 0, opacity: 0 }}
               transition={{
                 duration: 0.15,
                 ease: "easeInOut",
@@ -159,6 +159,10 @@ const ComboBox = () => {
                     name={company.name}
                     email={company.email}
                     logo={company.logo}
+                    onSelect={() => {
+                      setSelectedCompany(company.name);
+                      // setView("closed");
+                    }}
                   />
                 ))}
               </div>
@@ -178,9 +182,6 @@ const ComboBox = () => {
             <motion.div
               key="add"
               layoutId="motion"
-              // initial={{ height: 0, opacity: 0 }}
-              // animate={{ height: "auto", opacity: 1 }}
-              // exit={{ height: 0, opacity: 0 }}
               transition={{
                 duration: 0.15,
                 ease: "easeInOut",
@@ -243,11 +244,15 @@ type CompanyInfoProps = {
   name: string;
   email: string;
   logo: React.ReactNode;
+  onSelect: () => void;
 };
 
-const CompanyInfo = ({ name, email, logo }: CompanyInfoProps) => {
+const CompanyInfo = ({ name, email, logo, onSelect }: CompanyInfoProps) => {
   return (
-    <div className="w-full px-4 py-1.5 flex items-center justify-between hover:bg-[#f6f6f6]">
+    <div
+      onClick={onSelect}
+      className="w-full px-4 py-1.5 flex items-center justify-between hover:bg-[#f6f6f6] cursor-pointer"
+    >
       <div className="flex items-center justify-center">
         <div className="w-7 h-7 rounded-lg flex items-center justify-center bg-black mr-2">
           <img className="w-4 h-4 bg-cover" src={logo} alt="img" />
