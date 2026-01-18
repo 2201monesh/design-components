@@ -218,7 +218,7 @@ const ComboBox = () => {
                 onClick={() => setView("add")}
                 className="w-full h-[12%] bg-[#f6f6f6] rounded-b-lg border-t border-t-neutral-200 flex items-center justify-start px-4 cursor-pointer"
               >
-                <div className="border flex items-center justify-center px-2 py-1 rounded-md border-neutral-300 active:scale-[0.97] cursor-pointer">
+                <div className="hover:bg-neutral-200 flex items-center justify-center p-1 pr-1.5 rounded-md cursor-pointer">
                   <span className="mr-1 w-5 h-5 flex items-center justify-center">
                     <FaPlus size={14} className="text-neutral-500" />
                   </span>
@@ -260,7 +260,7 @@ const ComboBox = () => {
                   </span>
                   <span className="text-sm">Add a company</span>
                 </div>
-                <div className="px-2.5 py-0.5 border text-sm rounded-sm text-neutral-500 active:scale-[0.97] border-neutral-300 cursor-pointer">
+                <div className="px-2.5 py-0.5 hover:bg-neutral-200 text-sm rounded-sm text-neutral-500 cursor-pointer">
                   Add
                 </div>
               </motion.div>
