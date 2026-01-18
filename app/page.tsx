@@ -16,6 +16,7 @@ import NotchBarAnimation from "@/components/NotchBarAnimation";
 import SearchCommandWithAI from "@/components/SearchCommandWithAI";
 import SlackCard from "@/components/SlackCard";
 import TextGlitterAnimation from "@/components/TextGlitterAnimation";
+import ThinkingCard from "@/components/ThinkingCard";
 import WorkspaceCardComponent from "@/components/WorkspaceCardComponent";
 import Image from "next/image";
 
@@ -37,7 +38,8 @@ export default function Home() {
       {/* <SearchCommandWithAI /> */}
       {/* <FeedbackPopover /> */}
       {/* <IosSideNotch /> */}
-      <ComboBox />
+      {/* <ComboBox /> */}
+      <ThinkingCard />
     </div>
   );
 }

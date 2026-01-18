@@ -1,0 +1,62 @@
+.orange-texture {
+    position: absolute;
+    inset: 0;
+    background-color: white;
+    overflow: hidden;
+}
+
+.orange-texture::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    /* ORANGE PIXELS */
+    background:
+        radial-gradient(circle, #ff5f00 1.5px, transparent 1.6px);
+    background-size: 8px 8px;
+
+    /* MASK SHAPES (birds / flock zones) */
+    -webkit-mask-image:
+        radial-gradient(circle at center, black 45%, transparent 65%),
+        radial-gradient(circle at center, black 40%, transparent 70%),
+        radial-gradient(circle at center, black 35%, transparent 75%);
+
+    -webkit-mask-size:
+        260px 260px,
+        220px 220px,
+        180px 180px;
+
+    -webkit-mask-position:
+        10% 20%,
+        60% 30%,
+        30% 60%;
+
+    -webkit-mask-repeat: no-repeat;
+
+    animation: flockMove 22s ease-in-out infinite;
+    filter: blur(0.4px);
+}
+
+/* ANIMATION */
+@keyframes flockMove {
+    0% {
+        -webkit-mask-position:
+            10% 20%,
+            60% 30%,
+            30% 60%;
+    }
+
+    50% {
+        -webkit-mask-position:
+            50% 40%,
+            20% 60%,
+            70% 50%;
+    }
+
+    100% {
+        -webkit-mask-position:
+            90% 80%,
+            80% 40%,
+            40% 20%;
+    }
+}
