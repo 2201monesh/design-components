@@ -218,10 +218,14 @@ const ComboBox = () => {
                 onClick={() => setView("add")}
                 className="w-full h-[12%] bg-[#f6f6f6] rounded-b-lg border-t border-t-neutral-200 flex items-center justify-start px-4 cursor-pointer"
               >
-                <span className="mr-1.5 w-5 h-5 flex items-center justify-center">
-                  <FaPlus size={14} className="text-neutral-700" />
-                </span>
-                <span className="text-sm">Create company</span>
+                <div className="border flex items-center justify-center px-2 py-1 rounded-md border-neutral-300 active:scale-[0.97] cursor-pointer">
+                  <span className="mr-1 w-5 h-5 flex items-center justify-center">
+                    <FaPlus size={14} className="text-neutral-500" />
+                  </span>
+                  <span className="text-sm text-neutral-500">
+                    Create company
+                  </span>
+                </div>
               </div>
             </motion.div>
           )}
@@ -242,7 +246,7 @@ const ComboBox = () => {
             >
               <motion.div
                 variants={item}
-                className="w-full bg-[#f6f6f6] h-12 rounded-t-lg flex items-center justify-between px-4"
+                className="w-full bg-[#f6f6f6] h-12 rounded-t-lg flex items-center justify-between px-4 border-b border-neutral-200"
               >
                 <div
                   className="flex items-center justify-center cursor-pointer"
@@ -256,13 +260,13 @@ const ComboBox = () => {
                   </span>
                   <span className="text-sm">Add a company</span>
                 </div>
-                <div className="px-2.5 py-0.5 border text-sm rounded-sm bg-neutral-200 text-neutral-500 active:scale-[0.97] border-neutral-300 cursor-pointer">
+                <div className="px-2.5 py-0.5 border text-sm rounded-sm text-neutral-500 active:scale-[0.97] border-neutral-300 cursor-pointer">
                   Add
                 </div>
               </motion.div>
               <motion.div
                 variants={item}
-                className="w-full bg-white h-12 rounded-t-lg flex items-center justify-between px-4"
+                className="w-full bg-white h-12 rounded-t-lg flex items-center justify-between px-4 border-b border-neutral-200"
               >
                 <div className="flex items-center justify-center cursor-pointer">
                   <span className="mr-3">
@@ -271,7 +275,12 @@ const ComboBox = () => {
                       size={18}
                     />
                   </span>
-                  <span className="text-sm text-neutral-400">Name</span>
+                  {/* <span className="text-sm text-neutral-400">Name</span> */}
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    className="py-0.5 outline-none text-neutral-500"
+                  />
                 </div>
               </motion.div>
               <motion.div
@@ -285,7 +294,12 @@ const ComboBox = () => {
                       size={18}
                     />
                   </span>
-                  <span className="text-sm text-neutral-400">company.com</span>
+                  {/* <span className="text-sm text-neutral-400">company.com</span> */}
+                  <input
+                    type="text"
+                    placeholder="company.com"
+                    className="py-0.5 outline-none text-neutral-500"
+                  />
                 </div>
                 <div className="text-sm text-neutral-300 cursor-pointer">
                   optional
